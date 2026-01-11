@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding - Join Us in Celebration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">M & A</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#our-story">Our Story</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#venue">Venue</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">We're Getting Married</p>
+            <h1 class="hero-title">
+                <span class="name">Minghao</span>
+                <span class="ampersand">&</span>
+                <span class="name">Alice</span>
+            </h1>
+            <div class="hero-date">
+                <div class="date-line"></div>
+                <p>June 6, 2026</p>
+                <div class="date-line"></div>
+            </div>
+            <div class="countdown" aria-label="Countdown to the wedding">
+                <div class="countdown-item">
+                  <span class="countdown-number" id="days">--</span>
+                  <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-number" id="hours">--</span>
+                  <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-number" id="minutes">--</span>
+                  <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-number" id="seconds">--</span>
+                  <span class="countdown-label">Seconds</span>
+                </div>
+            </div>              
+            <p class="hero-location">Princeton University Chapel</p>
+            <a href="#rsvp" class="btn btn-primary">RSVP Now</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="story-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How It All Began</span>
+                <h2 class="section-title">Our Story</h2>
+                <div class="title-ornament">✦</div>
+            </div>
+
+            <div class="story-content">
+                <div class="story-text">
+                    <p class="story-lead">From Long Island City to forever.</p>
+
+                    <p>
+                        We met on <strong>March 5, 2022</strong> in <strong>Long Island City</strong>—one of those ordinary
+                        days that quietly turns into everything.
+                    </p>
+
+                    <p>
+                        On <strong>May 11, 2022</strong>, we officially became “us.” Since then, through everyday laughter,
+                        and adventures big and small, our love has grown into a home.
+                    </p>
+
+                    <p>
+                        After more than three wonderful years together, we’re so excited to get married—and even more excited
+                        to celebrate with the people we love.
+                    </p>
+                </div>
+
+                <div class="story-image">
+                    <div class="image-frame">
+                        <!-- ✅ Replace this with your own photo -->
+                        <img src="images/our-story.jpg" alt="Minghao and Alice" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Moments We Treasure</span>
+                <h2 class="section-title">Our Japan Proposal</h2>
+                <div class="title-ornament">✦</div>
+            </div>
+
+            <!-- Simple vertical gallery -->
+            <div class="gallery-vertical">
+                <div class="gallery-item">
+                    <img src="images/japan-1.jpg" alt="Japan Proposal Moment 1" loading="lazy">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/japan-2.jpg" alt="Japan Proposal Moment 2" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-label">Save The Date</span>
+                <h2 class="section-title">Wedding Schedule</h2>
+                <div class="title-ornament">✦</div>
+                <p class="section-description">A day we can’t wait to share with you.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">💒</div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">12:00 PM - 1:00 PM</span>
+                        <h3>Wedding Ceremony</h3>
+                        <p class="timeline-location">Princeton University Chapel</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">🍵</div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">1:30 PM - 3:00 PM</span>
+                        <h3>Tea Break</h3>
+                        <p class="timeline-location">
+                            <strong>Location: TBD</strong>
+                            <br>
+                            <span style="opacity: 0.9;">Possible venue: Prospect House Garden</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">🍽️</div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-time">5:00 PM - 9:00 PM</span>
+                        <h3>Reception Dinner</h3>
+                        <p class="timeline-location">
+                            <strong>Location: TBD</strong>
+                            <br>
+                            <span style="opacity: 0.9;">Possible venue: Nassau Inn</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="schedule-note">
+                We’ll confirm the tea break and dinner locations in <strong>February</strong> and update the website.
+            </p>
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section id="venue" class="venue-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Find Your Way</span>
+                <h2 class="section-title">Venue & Directions</h2>
+                <div class="title-ornament">✦</div>
+            </div>
+
+            <div class="venue-cards">
+                <!-- Ceremony (confirmed) -->
+                <div class="venue-card" data-aos="fade-up">
+                    <div class="venue-icon">💒</div>
+                    <h3>Princeton University Chapel</h3>
+                    <p class="venue-type">Ceremony</p>
+                    <address>
+                        Princeton University<br>
+                        Princeton, NJ 08544
+                    </address>
+                    <a href="https://maps.google.com/?q=Princeton+University+Chapel" target="_blank" class="venue-link">Get Directions →</a>
+                </div>
+
+                <!-- Tea Break (TBD) -->
+                <div class="venue-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="venue-icon">🍵</div>
+                    <h3>Location: TBD</h3>
+                    <p class="venue-type">Tea Break</p>
+                    <p class="venue-subtext">Possible venue: Prospect House Garden</p>
+                </div>
+
+                <!-- Dinner (TBD) -->
+                <div class="venue-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="venue-icon">🍽️</div>
+                    <h3>Location: TBD</h3>
+                    <p class="venue-type">Dinner Reception</p>
+                    <p class="venue-subtext">Possible venue: Nassau Inn</p>
+                </div>
+            </div>
+
+            <!-- Sightseeing Recommendations -->
+            <div class="sightseeing" data-aos="fade-up">
+                <h3>While You're in Princeton</h3>
+                <p class="sightseeing-intro">Make the most of your visit! Here are some nearby attractions:</p>
+
+                <div class="sightseeing-grid">
+                    <div class="sight-card">
+                        <div class="sight-image">
+                            <img src="images/sightseeing/art-museum.jpg" alt="Princeton Art Museum" loading="lazy">
+                        </div>
+                        <div class="sight-info">
+                            <h4>Princeton Art Museum</h4>
+                            <p>World-class art collection with free admission</p>
+                        </div>
+                    </div>
+                
+                    <div class="sight-card">
+                        <div class="sight-image">
+                            <img src="images/sightseeing/nassau-hall.jpg" alt="Nassau Hall" loading="lazy">
+                        </div>
+                        <div class="sight-info">
+                            <h4>Nassau Hall</h4>
+                            <p>Historic building, once served as U.S. Capitol</p>
+                        </div>
+                    </div>
+                
+                    <div class="sight-card">
+                        <div class="sight-image">
+                            <img src="images/sightseeing/palmer-square.jpg" alt="Palmer Square" loading="lazy">
+                        </div>
+                        <div class="sight-info">
+                            <h4>Palmer Square</h4>
+                            <p>Charming shops and restaurants in town center</p>
+                        </div>
+                    </div>
+                
+                    <div class="sight-card">
+                        <div class="sight-image">
+                            <img src="images/sightseeing/ias.jpg" alt="Institute for Advanced Study" loading="lazy">
+                        </div>
+                        <div class="sight-info">
+                            <h4>Institute for Advanced Study</h4>
+                            <p>Quiet trails, peaceful grounds, and Princeton history</p>
+                        </div>
+                    </div>
+                
+                    <div class="sight-card">
+                        <div class="sight-image">
+                            <img src="images/sightseeing/battlefield.jpg" alt="Princeton Battlefield State Park" loading="lazy">
+                        </div>
+                        <div class="sight-info">
+                            <h4>Princeton Battlefield State Park</h4>
+                            <p>Revolutionary War historic site with beautiful grounds</p>
+                        </div>
+                    </div>
+                </div>                
+    </section>
+
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-label">We Hope You Can Join Us</span>
+                <h2 class="section-title">RSVP</h2>
+                <div class="title-ornament">✦</div>
+            </div>
+
+            <form id="rsvp-form" class="rsvp-form">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+            
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    <small class="field-hint">We’ll only use this to send important updates (e.g., venue details).</small>
+                </div>
+            
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="optional">(Optional)</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+            
+                <!-- Attendance -->
+                <div class="form-group attendance-group">
+                    <label>Will you be able to attend? <span class="required">*</span></label>
+            
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="yes" required>
+                            <span class="radio-dot"></span>
+                            <span class="radio-text"><strong>Yes</strong>, I’ll be there</span>
+                        </label>
+            
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="no" required>
+                            <span class="radio-dot"></span>
+                            <span class="radio-text"><strong>No</strong>, sadly I can’t make it</span>
+                        </label>
+                    </div>
+                </div>
+            
+                <!-- Details (only show when attendance=yes) -->
+                <div id="rsvp-details" class="rsvp-details hidden">
+                    <div class="form-group attendance-group">
+                        <label>Which parts will you attend? <span class="required">*</span></label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="events" value="ceremony">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">
+                                    <strong>Wedding Ceremony</strong>
+                                    <small>12:00 PM - 1:00 PM</small>
+                                </span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="events" value="tea">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">
+                                    <strong>Tea Break</strong>
+                                    <small>1:30 PM - 3:00 PM</small>
+                                </span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="events" value="dinner">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">
+                                    <strong>Reception Dinner</strong>
+                                    <small>5:00 PM - 9:00 PM</small>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="dietary">Dietary Restrictions <span class="optional">(Optional)</span></label>
+                        <textarea id="dietary" name="dietary" rows="3" placeholder="Please let us know of any dietary restrictions or allergies"></textarea>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="message">Message for the Couple <span class="optional">(Optional)</span></label>
+                        <textarea id="message" name="message" rows="4" placeholder="Share your wishes or any message for us"></textarea>
+                    </div>
+                </div>
+            
+                <button type="submit" class="btn btn-submit">
+                    <span>Send RSVP</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13"></path>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                    </svg>
+                </button>
+            </form>
+                <!-- Success Message -->
+                <div id="rsvp-success" class="rsvp-success hidden">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank You!</h3>
+                    <p>Your RSVP has been received. We can't wait to celebrate with you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-names">
+                    <span>Minghao</span>
+                    <span class="footer-heart">♥</span>
+                    <span>Alice</span>
+                </div>
+                <p class="footer-date">June 6, 2026</p>
+                <p class="footer-message">With love and gratitude for your presence in our lives</p>
+            </div>
+            <div class="footer-bottom">
+                <p>#MinghaoAndAlice2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
