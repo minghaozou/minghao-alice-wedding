@@ -301,7 +301,14 @@
                 <div class="title-ornament">✦</div>
             </div>
 
-            <form id="rsvp-form" class="rsvp-form">
+            <form 
+            id="rsvp-form" 
+            class="rsvp-form" 
+            name="rsvp"
+            method="POST"
+            data-netlify="true"
+          >
+              <input type="hidden" name="form-name" value="rsvp">          
                 <div class="form-group">
                     <label for="name">Full Name <span class="required">*</span></label>
                     <input type="text" id="name" name="name" required placeholder="Enter your full name">
