@@ -29,7 +29,7 @@ function initBackgroundMusic() {
     function setUI(isPlaying) {
       btn.classList.toggle('is-playing', isPlaying);
       if (text) text.textContent = isPlaying ? 'Pause Music' : 'Play Music';
-      if (icon) icon.textContent = isPlaying ? '⏸️' : '🔊';
+      if (icon) icon.textContent = isPlaying ? '⏸️' : '🎧';
       btn.setAttribute('aria-pressed', String(isPlaying));
     }
   
