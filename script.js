@@ -11,7 +11,47 @@ document.addEventListener('DOMContentLoaded', function() {
     initRSVPForm();
     initScrollAnimations();
     initCountdown();
+    initBackgroundMusic();
 });
+
+function initBackgroundMusic() {
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('music-toggle');
+  
+    if (!audio || !btn) return;
+  
+    // Start with a friendly default volume
+    audio.volume = 0.35;
+  
+    const icon = btn.querySelector('.music-icon');
+    const text = btn.querySelector('.music-text');
+  
+    function setUI(isPlaying) {
+      btn.classList.toggle('is-playing', isPlaying);
+      if (text) text.textContent = isPlaying ? 'Pause Music' : 'Play Music';
+      if (icon) icon.textContent = isPlaying ? '⏸️' : '🔊';
+      btn.setAttribute('aria-pressed', String(isPlaying));
+    }
+  
+    setUI(false);
+  
+    btn.addEventListener('click', async () => {
+      try {
+        if (audio.paused) {
+          await audio.play(); // required user gesture -> click
+          setUI(true);
+        } else {
+          audio.pause();
+          setUI(false);
+        }
+      } catch (e) {
+        console.warn('Audio play blocked by browser:', e);
+        alert('Your browser blocked autoplay. Tap the button again to start the music.');
+      }
+    });
+  }
+  
+
 
 /**
  * Navigation functionality
@@ -254,8 +294,7 @@ function initRSVPForm() {
           submitBtn.disabled = false;
         }
       });
-      
-    
+        
     // Form validation
     function validateForm(form) {
         const name = form.querySelector('#name').value.trim();

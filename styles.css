@@ -146,6 +146,48 @@ img {
     box-shadow: 0 6px 20px rgba(201, 169, 98, 0.4);
 }
 
+/* Background music toggle */
+.music-toggle {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 3000;
+  
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  
+    padding: 0.8rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  
+    background: rgba(44, 62, 80, 0.65);
+    backdrop-filter: blur(10px);
+  
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+  
+    cursor: pointer;
+    transition: var(--transition-medium);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .music-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .music-toggle.is-playing .music-icon {
+    animation: pulse 1.3s ease-in-out infinite;
+  }
+  
+  .music-toggle .music-text {
+    font-weight: 400;
+  }
+  
+
 /* ===================================
    Navigation
    =================================== */
