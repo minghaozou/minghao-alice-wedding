@@ -212,74 +212,49 @@ function initRSVPForm() {
     attendanceRadios.forEach(r => r.addEventListener('change', setDetailsVisibility));
     setDetailsVisibility();
  
-    form.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
-        
-        // Validate form
-        if (!validateForm(form)) {
-            return;
-        }
-        
-        // Collect form data
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            phone: formData.get('phone') || '',
-            attendance: formData.get('attendance'), // yes/no
-            events: formData.getAll('events'),      // only if yes, otherwise empty
-            dietary: formData.get('dietary') || '',
-            message: formData.get('message') || ''
-        };
-        
-        // Show loading state
+      
+        if (!validateForm(form)) return;
+      
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<span>Sending...</span>';
         submitBtn.disabled = true;
-        
-        // Simulate form submission (replace with actual API call)
+      
         try {
-            // In a real implementation, you would send this to your backend
-            // await fetch('/api/rsvp', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // });
-            
-            // Simulate network delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Log the data (for demo purposes)
-            console.log('RSVP Submitted:', data);
-            
-            // Show success message (customized by attendance)
-            const attendance = data.attendance; // "yes" or "no"
-
-            const successTitle = successMessage.querySelector('h3');
-            const successText = successMessage.querySelector('p');
-
-            if (attendance === 'yes') {
-                successTitle.textContent = 'Thank You!';
-                successText.textContent = "We can't wait to celebrate with you!";
-            } else {
-                successTitle.textContent = 'Thank You!';
-                successText.textContent = 'Thank you for your response.';
-            }
-
-            form.style.display = 'none';
-            successMessage.classList.remove('hidden');
-
-            // Scroll to success message
-            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-        } catch (error) {
-            console.error('Error submitting RSVP:', error);
-            alert('There was an error submitting your RSVP. Please try again.');
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
+          const formData = new FormData(form);
+      
+          // ✅ 关键：真的发 POST 给 Netlify Forms
+          await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString(),
+          });
+      
+          // ✅ 按 attendance 改成功文案（你之前要的 yes/no 文案）
+          const attendance = formData.get('attendance'); // "yes" or "no"
+          const successTitle = successMessage.querySelector('h3');
+          const successText = successMessage.querySelector('p');
+      
+          successTitle.textContent = 'Thank You!';
+          successText.textContent =
+            attendance === 'yes'
+              ? "We can't wait to celebrate with you!"
+              : 'Thank you for your response.';
+      
+          form.style.display = 'none';
+          successMessage.classList.remove('hidden');
+          successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+        } catch (err) {
+          console.error(err);
+          alert('There was an error submitting your RSVP. Please try again.');
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
         }
-    });
+      });
+      
     
     // Form validation
     function validateForm(form) {
