@@ -888,10 +888,17 @@ section {
 
 .venue-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    /* 自适应：宽屏最多3列，窄屏自动变2/1列 */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--space-md);
-    margin-bottom: var(--space-xl);
+
+    /* 关键：宽屏也不会铺到太散，整体保持居中 */
+    max-width: 1100px;
+    margin: 0 auto var(--space-xl);
+    width: 100%;
 }
+
 
 .venue-card {
     background: var(--color-white);
@@ -968,14 +975,22 @@ section {
 
 .sightseeing-intro {
     color: var(--color-warm-gray);
-    margin-bottom: var(--space-lg);
+    margin: 0 auto var(--space-lg);
+    max-width: 700px;
 }
 
 .sightseeing-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* 自动换行：宽就多列，窄就少列 */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--space-md);
+
+    /* 关键：限定最大宽度并居中 */
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
 }
+
 
 .sight-card {
     background: var(--color-white);
