@@ -473,6 +473,75 @@ section {
     background: var(--color-ivory);
 }
 
+/* --- Our Story: photo collage (stable version) --- */
+.story-images {
+    position: relative;
+  }
+  
+  .story-collage {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-auto-flow: dense;
+    gap: var(--space-sm);
+  }
+  
+  /* Common */
+  .collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-medium);
+    background: var(--color-white);
+  }
+  
+  .collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+  }
+  
+  .collage-item:hover img {
+    transform: scale(1.06);
+  }
+  
+  /* Big image */
+  .collage-big {
+    grid-row: span 2;
+    aspect-ratio: 3 / 4;
+  }
+  
+  /* Small images */
+  .story-collage .collage-item:not(.collage-big) {
+    aspect-ratio: 1 / 1;
+  }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .story-collage {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .collage-big {
+      grid-column: span 2;
+      aspect-ratio: 16 / 9;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 480px) {
+    .story-collage {
+      grid-template-columns: 1fr;
+    }
+  
+    .collage-big,
+    .story-collage .collage-item:not(.collage-big) {
+      aspect-ratio: 4 / 3;
+    }
+  }
+  
+
 .story-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
