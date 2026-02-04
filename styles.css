@@ -529,10 +529,16 @@ section {
     }
   }
   
-  /* Mobile */
-  @media (max-width: 480px) {
+/* Mobile */
+@media (max-width: 480px) {
     .story-collage {
       grid-template-columns: 1fr;
+      grid-auto-flow: row; /* ✅ 防止 dense 在单列下怪异重排 */
+    }
+  
+    .collage-big {
+      grid-row: auto;      /* ✅ 关键：取消 span 2 */
+      grid-column: auto;
     }
   
     .collage-big,
@@ -566,7 +572,7 @@ section {
     font-size: 1.05rem;
 }
 
-.story-image {
+.story-images {
     position: relative;
 }
 
@@ -1435,7 +1441,7 @@ section {
         order: 2;
     }
     
-    .story-image {
+    .story-images {
         order: 1;
         max-width: 500px;
         margin: 0 auto;
