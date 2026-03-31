@@ -132,6 +132,17 @@ img {
     box-shadow: 0 6px 20px rgba(156, 175, 136, 0.5);
 }
 
+.btn-secondary {
+    background: transparent;
+    color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
 .btn-submit {
     width: 100%;
     justify-content: center;
@@ -382,6 +393,16 @@ img {
     font-style: italic;
     opacity: 0.9;
     margin-bottom: var(--space-lg);
+}
+
+.registry-note {
+    margin-top: var(--space-md);
+    font-size: 0.9rem;
+    opacity: 0.85;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 /* Scroll Indicator */
@@ -884,6 +905,28 @@ section {
     opacity: 0.85;
 }
 
+/* ===================================
+   Color Palette Section
+   =================================== */
+   .palette-section {
+    background: var(--color-cream);
+}
+
+.palette-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.palette-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+}
 
 /* ===================================
    Venue Section
